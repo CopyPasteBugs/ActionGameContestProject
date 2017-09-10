@@ -4,6 +4,7 @@
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
 # User-specific files
+*.log
 *.suo
 *.user
 *.userosscache
@@ -13,6 +14,9 @@
 *.userprefs
 
 # Build results
+solutions/
+logbackups/
+user/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
