@@ -29,6 +29,20 @@ class CPlayerComponent final : public IEntityComponent
 		MoveForward = 1 << 2,
 		MoveBack = 1 << 3
 	};
+public:
+	static CryGUID& IID()
+	{
+		static CryGUID id = "{A1BEFE71-5DC3-47E3-AC3A-05F773B39F8E}"_cry_guid;
+		return id;
+	}
+	static void ReflectType(Schematyc::CTypeDesc<CPlayerComponent>& desc)
+	{
+		desc.SetGUID(IID());
+		desc.SetEditorCategory("GameComponents");
+		desc.SetLabel("Player");
+		desc.SetDescription("A main game player");
+		desc.SetComponentFlags({ IEntityComponent::EFlags::Socket, IEntityComponent::EFlags::Attach, IEntityComponent::EFlags::ClientOnly });
+	}
 
 public:
 	CPlayerComponent() = default;
@@ -36,16 +50,11 @@ public:
 
 	// IEntityComponent
 	virtual void Initialize() override;
-
 	virtual uint64 GetEventMask() const override;
 	virtual void ProcessEvent(SEntityEvent& event) override;
 	// ~IEntityComponent
 
-	// Reflect type to set a unique identifier for this component
-	static void ReflectType(Schematyc::CTypeDesc<CPlayerComponent>& desc)
-	{
-		desc.SetGUID("{63F4C0C6-32AF-4ACB-8FB0-57D45DD14725}"_cry_guid);
-	}
+
 
 	void Revive();
 

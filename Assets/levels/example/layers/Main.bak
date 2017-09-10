@@ -1,0 +1,402 @@
+<ObjectLayer>
+ <Layer Name="Main" FullName="Main" GUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Hidden="0" Frozen="0" Expanded="0" Exportable="1" ExportLayerPak="1" DefaultLoaded="0" HavePhysics="1" IsDefaultColor="1">
+  <LayerObjects>
+   <Object Type="EntityWithComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{0E3DDAF7-F348-2D87-7BA3-5BE5B2EBD318}" Name="EnviormentProbe" Pos="262.80026,263.34674,38.046307" FloorNumber="-1" Rotate="1,0,0,0" ColorRGB="65535" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="63297e89-ea00-4f56-ac23-2e93c68fe71d" TypeName="Cry::DefaultComponents::CEnvironmentProbeComponent" GUID="21aad997-f164-c78a-2def-22d3dfd4a9de" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Active="true">
+       <BoxSize x="100" y="100" z="100"/>
+       <Options IgnoreVisAreas="false" SortPriority="0" AttenuationFalloffMax="1" AffectVolumetricFog="true" VolumetricFogOnly="false" OnlyAffectThisArea="true" BoxProjection="false"/>
+       <Color DiffMult="1" SpecMult="1">
+        <Color r="1" g="1" b="1" a="1"/>
+       </Color>
+       <Generation GeneratedCubemapPath="Textures\cubemaps\example\environmentprobe_cm.tif" AutoLoad="true" Resolution="Low"/>
+      </properties>
+     </Component>
+    </Components>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{2B35E0CC-A2B6-4259-EAC6-0CF27661A12C}" Name="Entity-6" Pos="269.25906,264.38843,16.860697" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.7429998,2.7429998,2.7429998" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Movement:RotateEntity" pos="-54,198,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{2D0CAD43-369C-8994-92C3-26FBE8DD2C5D}" Name="Entity-3" Pos="269.00439,264.38843,8.8331003" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Movement:RotateEntity" pos="-72,108,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{35165C61-37B5-5EE7-3FF5-2287EB256A4F}" Name="Entity-10" Pos="253.00201,264.38843,32.852028" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="2" Class="Movement:RotateEntity" pos="-234,252,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{40050B07-8EFC-CAC4-6923-ABB97534EA99}" Name="Entity-4" Pos="253.0799,264.38843,16.860695" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="5" Class="Movement:RotateEntity" pos="-90,72,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{49204DB7-2C6F-EAC6-2AC4-A1D421627C81}" Name="Entity-1" Pos="253.0799,264.38843,8.8331003" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Movement:RotateEntity" pos="-288,18,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{5BAD4BAB-E250-9F68-549E-1F23CB709A98}" Name="Entity-2" Pos="261.06805,264.38843,8.8331003" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Movement:RotateEntity" pos="-72,90,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{62EED1FE-26FB-36A1-A22B-A26119A5B464}" Name="Entity-12" Pos="269.39487,264.38843,32.852028" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Movement:RotateEntity" pos="-90,90,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{7C63DF48-0E02-0F0F-5FDA-09F341124365}" Name="Entity-11" Pos="261.07614,264.38843,32.852028" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="2" Class="Movement:RotateEntity" pos="-144,-54,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{A3F68E6B-7DBD-F53B-323F-B3C29ED58404}" Name="Entity-5" Pos="261.08398,264.38843,16.860695" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Movement:RotateEntity" pos="-108,144,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{A9183564-0956-E1BB-0D9F-DC66391B7597}" Name="Entity-9" Pos="253.00201,264.38843,24.873446" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Movement:RotateEntity" pos="-144,36,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{AEAB8F35-8FDD-BA6C-7DD7-08DAF5B32C5C}" Name="Entity-7" Pos="269.25906,264.38843,24.873446" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Movement:RotateEntity" pos="-90,90,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+   <Object Type="EntityWithStaticMeshComponent" Layer="Main" LayerGUID="{7DC816F2-D365-4BAE-9111-912CED6E8F6A}" Id="{E57540FB-EFD3-5A9A-6946-F5C3859F857A}" Name="Entity-8" Pos="261.15411,264.38843,24.873446" FloorNumber="-1" Rotate="1,0,0,0" Scale="2.743,2.743,2.743" ColorRGB="65535" Material="objects/sphere" MatLayersMask="0" OutdoorOnly="0" CastShadow="1" CastShadowMinspec="1" DynamicDistanceShadows="0" GIMode="0" LodRatio="100" ViewDistRatio="100" HiddenInGame="0" RecvWind="0" RenderNearest="0" NoStaticDecals="0" EntityClass="Entity" HasEntity="1">
+    <Properties />
+    <Components>
+     <Component CryXmlVersion="2" TypeGUID="6ddd0033-6aaa-4b71-b8ea-108258205e29" TypeName="Cry::DefaultComponents::CStaticMeshComponent" GUID="f34ae889-9c77-716d-f985-ee48a026613b" Name="" UserAdded="true">
+      <Transform x="1" y="1" z="1">
+       <translation>
+        <element element="0"/>
+        <element element="0"/>
+        <element element="0"/>
+       </translation>
+       <rotation x="0" y="-0" z="0"/>
+       <scale />
+      </Transform>
+      <properties Type="RenderAndCollider" FilePath="objects/sphere.cgf">
+       <Physics Mass="10" Density="-1"/>
+      </properties>
+     </Component>
+     <Component CryXmlVersion="2" TypeGUID="912c6ce8-56f7-4ffa-9134-f98d4e307bd6" TypeName="Cry::DefaultComponents::CSimplePhysicsComponent" GUID="fc114eb3-0152-ebae-5545-969e7b4bbeed" Name="" UserAdded="true">
+      <properties EnabledByDefault="true" Type="Static" SendCollisionSignal="false"/>
+     </Component>
+    </Components>
+    <FlowGraph Description="" Group="" enabled="1" MultiPlayer="ClientServer">
+     <Nodes>
+      <Node Id="1" Class="Movement:RotateEntity" pos="-108,0,0" GraphEntity="0">
+       <Inputs entityId="0" Speed="0,0,50" Paused="0" Ref="0"/>
+      </Node>
+     </Nodes>
+     <Edges />
+     <GraphTokens />
+    </FlowGraph>
+   </Object>
+  </LayerObjects>
+ </Layer>
+</ObjectLayer>

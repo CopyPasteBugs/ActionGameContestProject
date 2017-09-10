@@ -13,10 +13,14 @@
 // Included only once per DLL module.
 #include <CryCore/Platform/platform_impl.inl>
 
+#include "Components/UnifiedCharacterController.h"
+#include "Components/PlayerCharacterController.h"
+#include "Components/EnemyCharacterController.h"
+#include "Components/Player.h"
+
 CGamePlugin::~CGamePlugin()
 {
 	// Remove any registered listeners before 'this' becomes invalid
-	gEnv->pGameFramework->RemoveNetworkedClientListener(*this);
 	gEnv->pSystem->GetISystemEventDispatcher()->RemoveListener(this);
 
 	if (gEnv->pSchematyc)
@@ -29,10 +33,27 @@ bool CGamePlugin::Initialize(SSystemGlobalEnvironment& env, const SSystemInitPar
 {
 	// Register for engine system events, in our case we need ESYSTEM_EVENT_GAME_POST_INIT to load the map
 	gEnv->pSystem->GetISystemEventDispatcher()->RegisterListener(this, "CGamePlugin");
-	// Listen for client connection events, in order to create the local player
-	gEnv->pGameFramework->AddNetworkedClientListener(*this);
-
+	m_updateFlags = EPluginUpdateType::EUpdateType_Update | EPluginUpdateType::EUpdateType_PrePhysicsUpdate;
 	return true;
+}
+
+void CGamePlugin::OnPluginUpdate(EPluginUpdateType updateType)
+{
+	switch (updateType)
+	{
+	case EPluginUpdateType::EUpdateType_Update:
+	{
+		// subsystem update call
+	}
+	break;
+	case EPluginUpdateType::EUpdateType_PrePhysicsUpdate:
+	{
+
+	}
+	break;
+	default:
+		break;
+	}
 }
 
 void CGamePlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lparam)
@@ -42,12 +63,6 @@ void CGamePlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lp
 	case ESYSTEM_EVENT_REGISTER_SCHEMATYC_ENV:
 	{
 		// Register all components that belong to this plug-in
-		auto staticAutoRegisterLambda = [](Schematyc::IEnvRegistrar& registrar)
-		{
-			// Call all static callback registered with the CRY_STATIC_AUTO_REGISTER_WITH_PARAM
-			Detail::CStaticAutoRegistrar<Schematyc::IEnvRegistrar&>::InvokeStaticCallbacks(registrar);
-		};
-
 		if (gEnv->pSchematyc)
 		{
 			gEnv->pSchematyc->GetEnvRegistry().RegisterPackage(
@@ -56,8 +71,7 @@ void CGamePlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lp
 					"EntityComponents",
 					"Crytek GmbH",
 					"Components",
-					staticAutoRegisterLambda
-					)
+					[this](Schematyc::IEnvRegistrar& registrar) { RegisterComponents(registrar); })
 			);
 		}
 	}
@@ -68,73 +82,73 @@ void CGamePlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lp
 		// Don't need to load the map in editor
 		if (!gEnv->IsEditor())
 		{
+			gEnv->pConsole->ExecuteString("e_waterocean=0");
+			gEnv->pConsole->ExecuteString("e_waterOceanFFT=0");
+			
+			//gEnv->pConsole->ExecuteString("e_fog=1");
+			//gEnv->pConsole->ExecuteString("e_clouds=1");
+			//gEnv->pConsole->ExecuteString("e_terrain = 1");
+			//gEnv->pConsole->ExecuteString("e_sun=1");
+			//gEnv->pConsole->ExecuteString("e_physOceanCell=0.0");
+			//gEnv->pConsole->ExecuteString("e_Wind=0");
+			//gEnv->pConsole->ExecuteString("s_DrawAudioDebug=0");
+			//gEnv->pConsole->ExecuteString("ai_MNMPathFinderQuota=0.05");
+			//gEnv->pConsole->ExecuteString("ai_MNMPathfinderConcurrentRequests=10");
+
+			gEnv->pConsole->ExecuteString("p_draw_helpers=0");
+			gEnv->pConsole->ExecuteString("r_RainMaxViewDist_Deferred = 100.0");
+
 			gEnv->pConsole->ExecuteString("map example", false, true);
 		}
 	}
 	break;
+	case ESYSTEM_EVENT_LEVEL_GAMEPLAY_START:
+	{
+		// Setup time
+		ITimeOfDay* tod = gEnv->p3DEngine->GetTimeOfDay();
+		tod->LoadPreset("Assets\\libs\\environmentpresets\\example.xml");
+		tod->SetTime(16.8f);
+		tod->Update(true, true);
+
+		// Global Time Scale factor
+		gEnv->pConsole->ExecuteString("t_Scale=1.0");
+	}
+	default:
+		break;
 	}
 }
 
-bool CGamePlugin::OnClientConnectionReceived(int channelId, bool bIsReset)
+bool CGamePlugin::RegisterFlowNodes()
 {
-	// Connection received from a client, create a player entity and component
-	SEntitySpawnParams spawnParams;
-	spawnParams.pClass = gEnv->pEntitySystem->GetClassRegistry()->GetDefaultClass();
-	spawnParams.sName = "Player";
-	spawnParams.nFlags |= ENTITY_FLAG_NEVER_NETWORK_STATIC;
-	
-	// Set local player details
-	if (m_players.size() == 0 && !gEnv->IsDedicated())
-	{
-		spawnParams.id = LOCAL_PLAYER_ENTITY_ID;
-		spawnParams.nFlags |= ENTITY_FLAG_LOCAL_PLAYER;
-	}
-
-	// Spawn the player entity
-	if (IEntity* pPlayerEntity = gEnv->pEntitySystem->SpawnEntity(spawnParams))
-	{
-		// Set the local player entity channel id, and bind it to the network so that it can support Multiplayer contexts
-		pPlayerEntity->GetNetEntity()->SetChannelId(channelId);
-		pPlayerEntity->GetNetEntity()->BindToNetwork();
-
-		// Create the player component instance
-		CPlayerComponent* pPlayer = pPlayerEntity->GetOrCreateComponentClass<CPlayerComponent>();
-
-		// Push the component into our map, with the channel id as the key
-		m_players.emplace(std::make_pair(channelId, pPlayerEntity->GetId()));
-	}
-
+	CryRegisterFlowNodes();
 	return true;
 }
 
-bool CGamePlugin::OnClientReadyForGameplay(int channelId, bool bIsReset)
+bool CGamePlugin::UnregisterFlowNodes()
 {
-	// Revive players when the network reports that the client is connected and ready for gameplay
-	auto it = m_players.find(channelId);
-	if (it != m_players.end())
-	{
-		if (IEntity* pPlayerEntity = gEnv->pEntitySystem->GetEntity(it->second))
-		{
-			if (CPlayerComponent* pPlayer = pPlayerEntity->GetComponent<CPlayerComponent>())
-			{
-				pPlayer->Revive();
-			}
-		}
-	}
-
-	return true;
+	CryUnregisterFlowNodes();
+	return false;
 }
 
-void CGamePlugin::OnClientDisconnected(int channelId, EDisconnectionCause cause, const char* description, bool bKeepClient)
+void CGamePlugin::RegisterComponents(Schematyc::IEnvRegistrar & registrar)
 {
-	// Client disconnected, remove the entity and from map
-	auto it = m_players.find(channelId);
-	if (it != m_players.end())
+	Schematyc::CEnvRegistrationScope scope = registrar.Scope(IEntity::GetEntityScopeGUID());
 	{
-		gEnv->pEntitySystem->RemoveEntity(it->second);
-
-		m_players.erase(it);
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(IUnifiedCharacterController));
 	}
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CPlayerCharacterController));
+	}
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CEnemyCharacterController));
+	}
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CPlayerComponent));
+	}
+
+
+
+
 }
 
 CRYREGISTER_SINGLETON_CLASS(CGamePlugin)
