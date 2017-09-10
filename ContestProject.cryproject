@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "type": "",
+    "info": {
+        "name": "ContestProject"
+    },
+    "content": {
+        "assets": [
+            "Assets"
+        ],
+        "code": [
+            "Code"
+        ]
+    },
+    "require": {
+        "engine": "engine-5.4",
+        "plugins": [
+            {
+                "type": "EPluginType::Native",
+                "path": "CryDefaultEntities"
+            },
+            {
+                "type": "EPluginType::Native",
+                "path": "CrySensorSystem"
+            },
+            {
+                "type": "EPluginType::Native",
+                "path": "CryPerceptionSystem"
+            },
+            {
+                "type": "EPluginType::Native",
+                "path": "bin/win_x64/ContestProject.dll"
+            }
+        ]
+    },
+    "console_variables": [
+        {"name": "ca_useIMG_CAF", "value": "0"},
+        {"name": "sys_spec", "value":"4"},
+        {"name": "r_Width", "value": "1600"},
+        {"name": "r_Height", "value": "900"},
+        {"name": "sys_target_platforms", "value": "pc"}
+    ]
+}
