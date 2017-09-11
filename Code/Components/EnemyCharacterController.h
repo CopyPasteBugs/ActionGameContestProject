@@ -17,9 +17,8 @@ public:
 		desc.SetEditorCategory("GameComponents");
 		desc.SetLabel("EnemyCharacterController");
 		desc.SetDescription("Does stuff");
-		desc.SetIcon("icons:ObjectTypes/light.ico");
-		desc.SetComponentFlags({ IEntityComponent::EFlags::Socket, IEntityComponent::EFlags::Attach, IEntityComponent::EFlags::ClientOnly });
-
+		desc.SetIcon("icons:ObjectTypes/Core.ico");
+		desc.SetComponentFlags({ IEntityComponent::EFlags::ClientOnly, IEntityComponent::EFlags::HideFromInspector });
 		desc.AddMember(&CEnemyCharacterController::m_name, 'name', "Name", "Name", "Name for the component", "");
 	}
 

@@ -183,10 +183,8 @@ void IUnifiedCharacterController::Ragdollize()
 {
 	SEntityPhysicalizeParams physParams;
 	physParams.type = PE_ARTICULATED;
-
 	physParams.mass = m_unifiedPhysics.m_mass;
 	physParams.nSlot = GetEntitySlotId();
-
 	physParams.bCopyJointVelocities = true;
 
 	m_pEntity->Physicalize(physParams);

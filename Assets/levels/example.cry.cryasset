@@ -30,11 +30,13 @@
   <Path>engineassets/texturemsg/defaultsolids.mtl</Path>
   <Path>engineassets/textures/grey.dds</Path>
   <Path>engineassets/textures/skys/night/half_moon.dds</Path>
+  <Path>libs/environmentpresets/assets/libs/environmentpresets/example.xml.xml</Path>
   <Path>libs/environmentpresets/example.xml</Path>
   <Path>libs/flownodes/substitutions.xml</Path>
   <Path>objects/helper_illum.mtl</Path>
   <Path>objects/sphere.cgf</Path>
   <Path>objects/sphere.mtl</Path>
+  <Path>scripts/ai/factions.xml</Path>
   <Path>textures/cubemaps/example/environmentprobe_cm.dds</Path>
   <Path>textures/cubemaps/example/environmentprobe_cm_diff.dds</Path>
  </Dependencies>

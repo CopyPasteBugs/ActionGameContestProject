@@ -1,0 +1,14 @@
+<AssetMetadata version="0" type="Mesh" guid="0dec67aa-e1af-b9c2-e637-8caa2ce6cd35" source="model.dae">
+ <Files>
+  <File path="dummy.cgf"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">76</Detail>
+  <Detail name="vertexCount">152</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+ </Details>
+ <Dependencies>
+  <Path>./Dummy.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

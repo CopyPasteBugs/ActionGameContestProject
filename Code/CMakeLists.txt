@@ -36,6 +36,8 @@ add_sources("Components_uber.cpp"
     "Components/UnifiedCamera.cpp"
     "Components/ThirdPersonCamera.h"
     "Components/ThirdPersonCamera.cpp"
+    "Components/GameCommon.h"
+    "Components/GameCommon.cpp"
 )
 
 end_sources()

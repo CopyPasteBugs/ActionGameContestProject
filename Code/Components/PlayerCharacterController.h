@@ -18,7 +18,7 @@ public:
 		desc.SetLabel("PlayerCharacterController");
 		desc.SetDescription("Does stuff");
 		desc.SetIcon("icons:ObjectTypes/light.ico");
-		desc.SetComponentFlags({ IEntityComponent::EFlags::Socket, IEntityComponent::EFlags::Attach, IEntityComponent::EFlags::ClientOnly });
+		desc.SetComponentFlags({ IEntityComponent::EFlags::ClientOnly, IEntityComponent::EFlags::HideFromInspector });
 
 		desc.AddMember(&CPlayerCharacterController::m_name, 'name', "Name", "Name", "Name for the component", "");
 	}

@@ -17,6 +17,9 @@
 #include "Components/PlayerCharacterController.h"
 #include "Components/EnemyCharacterController.h"
 #include "Components/Player.h"
+#include "Components/UnifiedCamera.h"
+#include "Components/ThirdPersonCamera.h"
+
 
 CGamePlugin::~CGamePlugin()
 {
@@ -74,8 +77,9 @@ void CGamePlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lp
 					[this](Schematyc::IEnvRegistrar& registrar) { RegisterComponents(registrar); })
 			);
 		}
+
+		break;
 	}
-	break;
 		// Called when the game framework has initialized and we are ready for game logic to start
 	case ESYSTEM_EVENT_GAME_POST_INIT:
 	{
@@ -98,16 +102,17 @@ void CGamePlugin::OnSystemEvent(ESystemEvent event, UINT_PTR wparam, UINT_PTR lp
 			gEnv->pConsole->ExecuteString("p_draw_helpers=0");
 			gEnv->pConsole->ExecuteString("r_RainMaxViewDist_Deferred = 100.0");
 
-			gEnv->pConsole->ExecuteString("map example", false, true);
+			gEnv->pConsole->ExecuteString("map level1", false, true);
 		}
+
+		break;
 	}
-	break;
 	case ESYSTEM_EVENT_LEVEL_GAMEPLAY_START:
 	{
 		// Setup time
 		ITimeOfDay* tod = gEnv->p3DEngine->GetTimeOfDay();
-		tod->LoadPreset("Assets\\libs\\environmentpresets\\example.xml");
-		tod->SetTime(16.8f);
+		tod->LoadPreset("Assets\\libs\\environmentpresets\\level1.xml");
+		tod->SetTime(23.2f);
 		tod->Update(true, true);
 
 		// Global Time Scale factor
@@ -145,7 +150,12 @@ void CGamePlugin::RegisterComponents(Schematyc::IEnvRegistrar & registrar)
 	{
 		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CPlayerComponent));
 	}
-
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(IUnifiedCamera));
+	}
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CThirdPersonCamera));
+	}
 
 
 

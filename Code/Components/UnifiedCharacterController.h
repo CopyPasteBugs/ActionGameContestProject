@@ -71,6 +71,12 @@ public:
 	static void ReflectType(Schematyc::CTypeDesc<IUnifiedCharacterController>& desc)
 	{
 		desc.SetGUID(IID());
+		desc.SetEditorCategory("GameComponents");
+		desc.SetLabel("UnifiedCharacterController");
+		desc.SetDescription("");
+		desc.SetIcon("icons:General/Core.ico");
+		desc.SetComponentFlags({ IEntityComponent::EFlags::ClientOnly, IEntityComponent::EFlags::HideFromInspector });
+
 		desc.AddMember(&IUnifiedCharacterController::m_unifiedPhysics, 'phys', "UnifiedPhysics", "UnifiedPhysics", "UnifiedPhysical properties for the characters", SUnifiedPhysics());
 		desc.AddMember(&IUnifiedCharacterController::m_unifiedMovement, 'move', "UnifiedMovement", "UnifiedMovement", "UnifiedMovement properties for the character", SUnifiedMovement());
 
@@ -87,17 +93,13 @@ public:
 #ifndef RELEASE
 	virtual IEntityComponentPreviewer* GetPreviewer() final { return this; }
 	// ~IEntityComponent
-
 	// IEntityComponentPreviewer
 	virtual void SerializeProperties(Serialization::IArchive& archive) final {}
-
 	virtual void Render(const IEntity& entity, const IEntityComponent& component, SEntityPreviewContext &context) const final;
 	// ~IEntityComponentPreviewer
 #endif
 
 public: // extended functionality of component
-
-
 	bool IsOnGround() const { return m_bOnGround; }
 	const Schematyc::UnitLength<Vec3>& GetGroundNormal() const { return m_groundNormal; }
 	virtual SUnifiedPhysics& GetUnifiedPhysics() { return m_unifiedPhysics; };

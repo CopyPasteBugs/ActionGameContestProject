@@ -5,8 +5,12 @@
 
 #include <ICryMannequin.h>
 
-#include <DefaultComponents/Cameras/CameraComponent.h>
 #include <DefaultComponents/Input/InputComponent.h>
+
+
+
+class CThirdPersonCamera;
+class CPlayerCharacterController;
 
 ////////////////////////////////////////////////////////
 // Represents a player participating in gameplay
@@ -52,19 +56,22 @@ public:
 	virtual void Initialize() override;
 	virtual uint64 GetEventMask() const override;
 	virtual void ProcessEvent(SEntityEvent& event) override;
+	virtual void OnShutDown() override;
 	// ~IEntityComponent
 
-
-
+	void UpdateCharacterContoller(float frameTime);
 	void Revive();
 
 protected:
 	void HandleInputFlagChange(TInputFlags flags, int activationMode, EInputFlagType type = EInputFlagType::Hold);
 
 protected:
-	Cry::DefaultComponents::CCameraComponent* m_pCameraComponent = nullptr;
+	CPlayerCharacterController* m_pCharacterController = nullptr;
+	CThirdPersonCamera* m_pCameraComponent = nullptr;
+	IEntity* m_pEntityHelperCamera = nullptr;
 	Cry::DefaultComponents::CInputComponent* m_pInputComponent = nullptr;
 
 	TInputFlags m_inputFlags;
 	Vec2 m_mouseDeltaRotation;
+	float m_mouseWheel = 0.0f;
 };

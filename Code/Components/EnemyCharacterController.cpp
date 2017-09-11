@@ -4,7 +4,6 @@
 void CEnemyCharacterController::Initialize()
 {
 	IUnifiedCharacterController::Initialize();
-
 }
 
 uint64 CEnemyCharacterController::GetEventMask() const
@@ -20,6 +19,4 @@ void CEnemyCharacterController::ProcessEvent(SEntityEvent & event)
 void CEnemyCharacterController::OnShutDown()
 {
 	IUnifiedCharacterController::OnShutDown();
-
-
 }
