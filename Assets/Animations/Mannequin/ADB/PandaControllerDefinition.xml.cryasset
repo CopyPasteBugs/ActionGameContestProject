@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="dba8095d-b47e-57d4-3daf-4754fe99c52b">
+ <Files>
+  <File path="PandaControllerDefinition.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">ControllerDef</Detail>
+ </Details>
+</AssetMetadata>

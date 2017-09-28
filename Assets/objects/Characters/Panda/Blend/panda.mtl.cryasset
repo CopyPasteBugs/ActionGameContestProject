@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="95b3f45c-f7d3-9ef5-5077-042852d59f15">
+ <Files>
+  <File path="panda.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">1</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path>textures/defaults/white.dds</Path>
+ </Dependencies>
+</AssetMetadata>

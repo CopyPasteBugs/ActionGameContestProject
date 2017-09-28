@@ -1,0 +1,9 @@
+<Params>
+ <AnimationList>
+  <Animation name="$AnimEventDatabase" path="Animations/PandaAnimations/PandaAnimEvents.animevents"/>
+  <Animation name="#filepath" path="Animations/PandaAnimations"/>
+  <Animation name="*" path="*/*.caf"/>
+  <Animation name="*" path="*/*.bspace"/>
+  <Animation name="*" path="*/*.comb"/>
+ </AnimationList>
+</Params>

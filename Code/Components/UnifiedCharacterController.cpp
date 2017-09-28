@@ -20,22 +20,28 @@ void IUnifiedCharacterController::ProcessEvent(SEntityEvent & event)
 		IPhysicalEntity* pPhysicalEntity = m_pEntity->GetPhysics();
 		CRY_ASSERT_MESSAGE(pPhysicalEntity != nullptr, "Physical entity removed without call to IEntity::UpdateComponentEventMask!");
 
-		// Update stats
-		pe_status_living livingStatus;
-		if (pPhysicalEntity->GetStatus(&livingStatus) != 0)
-		{
-			m_bOnGround = !livingStatus.bFlying;
+		if (!m_bRagdoll) {
+			// Update stats
+			pe_status_living livingStatus;
+			if (pPhysicalEntity->GetStatus(&livingStatus) != 0)
+			{
+				m_bOnGround = !livingStatus.bFlying;
 
-			// Store the ground normal in case it is needed
-			// Note that users have to check if we're on ground before using, is considered invalid in air.
-			m_groundNormal = livingStatus.groundSlope;
-		}
+				// Store the ground normal in case it is needed
+				// Note that users have to check if we're on ground before using, is considered invalid in air.
+				m_groundNormal = livingStatus.groundSlope;
+			}
 
-		// Get the player's velocity from physics
-		pe_status_dynamics playerDynamics;
-		if (pPhysicalEntity->GetStatus(&playerDynamics) != 0)
-		{
-			m_velocity = playerDynamics.v;
+			// Get the player's velocity from physics
+			pe_status_dynamics playerDynamics;
+			if (pPhysicalEntity->GetStatus(&playerDynamics) != 0)
+			{
+				m_velocity = playerDynamics.v;
+
+				if (m_velocity.GetLength() > m_minMagnitude) // TODO: use GetLength2D ?
+					m_lastMinVelocity = m_velocity;
+
+			}
 		}
 	}
 	else if (event.event == ENTITY_EVENT_COLLISION)
@@ -188,4 +194,6 @@ void IUnifiedCharacterController::Ragdollize()
 	physParams.bCopyJointVelocities = true;
 
 	m_pEntity->Physicalize(physParams);
+
+	m_bRagdoll = true;
 }

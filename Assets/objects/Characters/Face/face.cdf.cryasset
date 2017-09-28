@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Character" guid="6cb9d331-02d0-12a4-d696-66de4736b73b">
+ <Files>
+  <File path="face.cdf"/>
+ </Files>
+ <Details />
+ <Dependencies>
+  <Path>objects/Characters/Face/Face.chr</Path>
+  <Path>objects/Characters/Face/Head.skin</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,19 @@
+<AssetMetadata version="0" type="Material" guid="6f4faad2-c4b6-b427-53d8-3d7814c8a71a">
+ <Files>
+  <File path="sfmat01.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">4</Detail>
+  <Detail name="textureCount">8</Detail>
+ </Details>
+ <Dependencies>
+  <Path>textures/white.dds</Path>
+  <Path>%engine%/engineassets/textures/white_ddn.dds</Path>
+  <Path>textures/white.dds</Path>
+  <Path>%engine%/engineassets/textures/white_ddn.dds</Path>
+  <Path>textures/white.dds</Path>
+  <Path>%engine%/engineassets/textures/white_ddn.dds</Path>
+  <Path>textures/white.dds</Path>
+  <Path>%engine%/engineassets/textures/white_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>

@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="a7835e5f-8298-c809-5ed4-c369aeb1474e">
+ <Files>
+  <File path="Panda.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">MannequinPreview</Detail>
+ </Details>
+</AssetMetadata>

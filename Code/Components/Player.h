@@ -6,11 +6,12 @@
 #include <ICryMannequin.h>
 
 #include <DefaultComponents/Input/InputComponent.h>
-
-
+#include <DefaultComponents/Geometry/AdvancedAnimationComponent.h>
 
 class CThirdPersonCamera;
 class CPlayerCharacterController;
+class IUnifiedCharacterAnimation;
+class CFootstepQueue;
 
 ////////////////////////////////////////////////////////
 // Represents a player participating in gameplay
@@ -59,13 +60,26 @@ public:
 	virtual void OnShutDown() override;
 	// ~IEntityComponent
 
+	void InitializeAnimation();
 	void UpdateCharacterContoller(float frameTime);
+	void UpdateAnimation(float frameTime);
 	void Revive();
+	void FindAttachments(ICharacterInstance* pCharacter);
+	bool GetTerrainHeight(Vec3 pos, Vec3& terrainHitPos);
+	void RaycastFootstepDown();
 
+	const int32 characterSlot = 1;
 protected:
 	void HandleInputFlagChange(TInputFlags flags, int activationMode, EInputFlagType type = EInputFlagType::Hold);
 
 protected:
+	//Cry::DefaultComponents::CAdvancedAnimationComponent* m_pAnimationComponent = nullptr;
+	IUnifiedCharacterAnimation* m_pAnimationComponent = nullptr;
+	FragmentID m_forwardFragmentId;
+	FragmentID m_idleFragmentId;
+	FragmentID m_walkFragmentId;
+	TagID m_rotateTagId;
+
 	CPlayerCharacterController* m_pCharacterController = nullptr;
 	CThirdPersonCamera* m_pCameraComponent = nullptr;
 	IEntity* m_pEntityHelperCamera = nullptr;
@@ -74,4 +88,12 @@ protected:
 	TInputFlags m_inputFlags;
 	Vec2 m_mouseDeltaRotation;
 	float m_mouseWheel = 0.0f;
+
+	IAttachment *pFootStepLeft = nullptr;
+	IAttachment *pFootStepRight = nullptr;
+	int FootStepLeftState = 0;
+	int FootStepRightState = 0;
+
+	CFootstepQueue* m_pFootstepQueue = nullptr;
+
 };

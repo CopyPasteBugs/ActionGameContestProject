@@ -3,6 +3,8 @@
   <File path="level1/level1.cry"/>
  </Files>
  <Dependencies>
+  <Path>%editor%/objects/envcube.cgf</Path>
+  <Path>%editor%/objects/envcube.mtl</Path>
   <Path>%engine%/engineassets/codecoverage/hit.dds</Path>
   <Path>%engine%/engineassets/codecoverage/pbar.dds</Path>
   <Path>%engine%/engineassets/codecoverage/unexpected.dds</Path>
@@ -29,10 +31,33 @@
   <Path>%engine%/engineassets/textures/defaults/16_grey.dds</Path>
   <Path>%engine%/engineassets/textures/grey.dds</Path>
   <Path>%engine%/engineassets/textures/skys/night/half_moon.dds</Path>
+  <Path>%engine%/engineassets/textures/white.dds</Path>
+  <Path>animations/mannequin/adb/pandacontrollerdefinition.xml</Path>
+  <Path>animations/mannequin/adb/pandafragmentids.xml</Path>
+  <Path>animations/mannequin/adb/pandatags.xml</Path>
+  <Path>animations/pandaanimations/idle.caf</Path>
+  <Path>animations/pandaanimations/run.caf</Path>
+  <Path>animations/pandaanimations/walk.caf</Path>
+  <Path>animations/skeletonlist.xml</Path>
+  <Path>engineassets/textures/grey.dds</Path>
   <Path>libs/environmentpresets/assets/libs/environmentpresets/example.xml.xml</Path>
+  <Path>libs/environmentpresets/assets/libs/environmentpresets/level1.xml.xml</Path>
   <Path>libs/environmentpresets/level1.xml</Path>
+  <Path>libs/p1.pfx</Path>
   <Path>objects/characters/dummy/dummy.cgf</Path>
   <Path>objects/characters/dummy/dummy.mtl</Path>
-  <Path>scripts/ai/factions.xml</Path>
+  <Path>objects/characters/panda/panda.cdf</Path>
+  <Path>objects/characters/panda/panda.chr</Path>
+  <Path>objects/characters/panda/panda.skin</Path>
+  <Path>objects/characters/panda/panda_hitmaterial.mtl</Path>
+  <Path>objects/default/editorprimitive.mtl</Path>
+  <Path>objects/default/primitive_cube.cgf</Path>
+  <Path>objects/glass01.mtl</Path>
+  <Path>objects/scrolluv.mtl</Path>
+  <Path>objects/sfmat01.mtl</Path>
+  <Path>textures/charactertexures/pandadiff.dds</Path>
+  <Path>textures/cubemaps/level1/entity-3_cm.dds</Path>
+  <Path>textures/cubemaps/level1/entity-3_cm_diff.dds</Path>
+  <Path>user/meshimporter/tmp_meshimporter_knafdq/mi_caf_material.mtl</Path>
  </Dependencies>
 </AssetMetadata>

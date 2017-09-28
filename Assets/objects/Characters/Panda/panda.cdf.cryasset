@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Character" guid="1800ba7b-f5fe-6e6b-c67e-5c9e0ac924d9">
+ <Files>
+  <File path="panda.cdf"/>
+ </Files>
+ <Details />
+ <Dependencies>
+  <Path>objects/Characters/Panda/panda.chr</Path>
+  <Path>objects/Characters/Panda/panda_hitmaterial.mtl</Path>
+  <Path>objects/Characters/Panda/panda.skin</Path>
+  <Path>objects/Characters/Panda/panda.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

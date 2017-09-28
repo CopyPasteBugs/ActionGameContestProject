@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="751416ea-20d2-7b90-49ac-4320ae754e5a">
+ <Files>
+  <File path="FaceFragmentIds.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">TagDefinition</Detail>
+ </Details>
+</AssetMetadata>

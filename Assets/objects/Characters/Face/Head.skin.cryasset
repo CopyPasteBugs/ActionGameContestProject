@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="SkinnedMesh" guid="3dd5e8c3-1dbd-dece-164a-65688f47b2e6" source="face.fbx">
+ <Files>
+  <File path="Head.skin"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">3</Detail>
+  <Detail name="triangleCount">2364</Detail>
+  <Detail name="vertexCount">1680</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+  <Detail name="bonesCount">11</Detail>
+ </Details>
+ <Dependencies>
+  <Path>%ENGINE%/EngineAssets/Materials/material_default.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

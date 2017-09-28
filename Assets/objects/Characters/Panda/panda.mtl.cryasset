@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="a98ba2b9-ab2d-c726-4e99-07dafdd045bc">
+ <Files>
+  <File path="panda.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">3</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path>textures/CharacterTexures/pandadiff.dds</Path>
+ </Dependencies>
+</AssetMetadata>

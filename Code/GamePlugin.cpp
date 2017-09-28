@@ -19,6 +19,11 @@
 #include "Components/Player.h"
 #include "Components/UnifiedCamera.h"
 #include "Components/ThirdPersonCamera.h"
+#include "Components/UnifiedCharacterAnimation.h"
+#include "Components/FootstepQueue.h"
+#include "Components/SimpleGeom.h"
+#include "Components/ProximityTrigger.h"
+#include "Components/SplineComponent.h"
 
 
 CGamePlugin::~CGamePlugin()
@@ -155,6 +160,21 @@ void CGamePlugin::RegisterComponents(Schematyc::IEnvRegistrar & registrar)
 	}
 	{
 		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CThirdPersonCamera));
+	}
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(IUnifiedCharacterAnimation));
+	}
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CFootstepQueue));
+	}
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CSimpleGeom));
+	}
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CProximitryTrigger));
+	}
+	{
+		Schematyc::CEnvRegistrationScope componentScope = scope.Register(SCHEMATYC_MAKE_ENV_COMPONENT(CSplineComponent));
 	}
 
 

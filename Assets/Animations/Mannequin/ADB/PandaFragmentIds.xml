@@ -1,0 +1,5 @@
+<TagDefinition version="2">
+ <Tags>
+  <Tag name="Walk" subTagDef="Animations/Mannequin/ADB/PandaTags.xml"/>
+ </Tags>
+</TagDefinition>

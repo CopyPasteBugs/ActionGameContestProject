@@ -1,0 +1,12 @@
+<AssetMetadata version="0" type="Material" guid="cdf74eef-7143-a547-3aec-851819c30090">
+ <Files>
+  <File path="sphere.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">1</Detail>
+ </Details>
+ <Dependencies>
+  <Path>%engine%/EngineAssets/TextureMsg/defaultnouvs.dds</Path>
+ </Dependencies>
+</AssetMetadata>

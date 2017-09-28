@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="59fdb3f0-1952-8a94-7046-fd0c7ffb8224">
+ <Files>
+  <File path="PandaFragmentIds.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">TagDefinition</Detail>
+ </Details>
+</AssetMetadata>

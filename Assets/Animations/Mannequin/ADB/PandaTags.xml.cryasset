@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="b8ec59f5-f7de-03d4-7356-d779c471e297">
+ <Files>
+  <File path="PandaTags.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">TagDefinition</Detail>
+ </Details>
+</AssetMetadata>

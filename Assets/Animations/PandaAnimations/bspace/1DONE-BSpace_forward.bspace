@@ -1,0 +1,18 @@
+<ParaGroup>
+
+ <Dimensions>
+  <Param Name="MoveSpeed" Min="0" Max="1" Cells="9"/>
+ </Dimensions>
+ 
+ <ExampleList>
+  <Example SetPara0="0" AName="Idle" PlaybackScale="1.0"/>
+  <Example SetPara0="0.5" AName="Walk" PlaybackScale="1.0"/>
+  <Example SetPara0="1" AName="Run"/>
+ </ExampleList>
+ 
+ <Blendable>
+  <Face p0="0" p1="1"/>
+  <Face p0="1" p1="2"/>
+ </Blendable>
+
+</ParaGroup>

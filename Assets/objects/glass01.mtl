@@ -1,0 +1,7 @@
+<Material MtlFlags="526336" Shader="Glass" GenMask="0" StringGenMask="" SurfaceType="" MatTemplate="" Diffuse="1,1,1" Specular="0.61720669,0.61720669,0.61720669" Opacity="0.34" Shininess="199" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="textures/white.dds"/>
+  <Texture Map="Bumpmap" File="%engine%/engineassets/textures/white_ddn.dds"/>
+ </Textures>
+ <PublicParams BumpMapTile="1" TintColor="1,1,1" TintCloudiness="0" BackLightScale="0.5" BumpScale="0.1"/>
+</Material>

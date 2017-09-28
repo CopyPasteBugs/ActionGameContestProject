@@ -1,0 +1,13 @@
+<ControllerDef>
+ <Tags filename="Animations/Mannequin/ADB/PandaTags.xml"/>
+ <Fragments filename="Animations/Mannequin/ADB/PandaFragmentIds.xml"/>
+ <FragmentDefs>
+  <Walk scopes="ThirdPerson"/>
+ </FragmentDefs>
+ <ScopeContextDefs>
+  <ThirdPersonCharacter />
+ </ScopeContextDefs>
+ <ScopeDefs>
+  <ThirdPerson layer="0" numLayers="1" context="ThirdPersonCharacter"/>
+ </ScopeDefs>
+</ControllerDef>

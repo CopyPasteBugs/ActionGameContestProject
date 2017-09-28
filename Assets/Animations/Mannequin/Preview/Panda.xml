@@ -1,0 +1,7 @@
+<MannequinPreview>
+ <controllerDef filename="Animations/Mannequin/ADB/PandaControllerDefinition.xml"/>
+ <contexts>
+  <contextData name="ThirdPerson" enabled="1" database="Animations/Mannequin/ADB/Panda.adb" context="ThirdPersonCharacter" model="Objects/Characters/Panda/Panda.cdf"/>
+ </contexts>
+ <History StartTime="0" EndTime="0"/>
+</MannequinPreview>

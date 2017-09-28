@@ -35,7 +35,7 @@ void CThirdPersonCamera::ProcessEvent(SEntityEvent & event)
 		// calculate rotation and pos onbase yaw and pitch + distance values
 		RotationMatrix = CCamera::CreateOrientationYPR(YawPitchRoll);
 		Vec3 cameraForward = GetEntity()->GetWorldTM().GetColumn1();
-		Vec3 pos = (Target->GetWorldPos()+Vec3(0,0,2.0f)) - (cameraForward * Distance); //TODO: add target offset variable
+		Vec3 pos = (Target->GetWorldPos() + m_TargetOffset) - (cameraForward * Distance); //TODO: add target offset variable
 		Rotation = Quat(RotationMatrix);
 
 		// set ditry rotation and pos(target trasforms) to blend-helper entity
@@ -79,4 +79,21 @@ Vec3 CThirdPersonCamera::GetPlaneForward()
 		ret = forwardCamera->GetWorldTM().GetColumn1();
 
 	return ret;
+}
+
+void CThirdPersonCamera::UpdateDistanceToTarget(float& wheelMove, float frameTime)
+{
+	if (fabs(wheelMove) > 0)
+	{
+		Distance += wheelMove * frameTime;
+		float clampDistance = CLAMP(Distance, m_minDistance, m_maxDistance);
+		SetDistance(clampDistance);
+		wheelMove = 0.0f;
+	}
+}
+
+void CThirdPersonCamera::UpdateYaw(float mouseDeltaRotationX, float frameTime)
+{
+	const float rotSpeed = 0.1f;
+	YawPitchRoll.x += ((mouseDeltaRotationX * rotSpeed) * frameTime);
 }

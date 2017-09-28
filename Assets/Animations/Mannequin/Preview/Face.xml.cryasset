@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="8572a451-db43-e4d2-5cff-cd09621b81a9">
+ <Files>
+  <File path="Face.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">MannequinPreview</Detail>
+ </Details>
+</AssetMetadata>

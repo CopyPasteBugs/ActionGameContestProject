@@ -1,0 +1,7 @@
+<TimeOfDay Time="23.200001" TimeStart="12" TimeEnd="12" TimeAnimSpeed="0">
+ <Presets>
+  <Preset Name="Assets\libs\environmentpresets\level1.xml" Default="1"/>
+  <Preset Name="libs/environmentpresets/Assets\libs\environmentpresets\level1.xml.xml"/>
+  <Preset Name="libs/environmentpresets/BigWorld.xml"/>
+ </Presets>
+</TimeOfDay>

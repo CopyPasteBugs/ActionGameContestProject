@@ -1,0 +1,13 @@
+<AssetMetadata version="0" type="Material" guid="ee06cf72-57ce-0afc-b072-bfe345e8ef6b">
+ <Files>
+  <File path="scrolluv.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">2</Detail>
+ </Details>
+ <Dependencies>
+  <Path>%engine%/engineassets/textures/caustics_sampler.dds</Path>
+  <Path>%engine%/engineassets/textures/hex_ddn.dds</Path>
+ </Dependencies>
+</AssetMetadata>

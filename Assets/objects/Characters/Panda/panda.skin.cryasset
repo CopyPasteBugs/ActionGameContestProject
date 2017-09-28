@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="SkinnedMesh" guid="cc2165b5-b3a5-6533-4979-57eabb465389" source="pandaModelForFBX.fbx">
+ <Files>
+  <File path="panda.skin"/>
+ </Files>
+ <Details>
+  <Detail name="materialCount">4</Detail>
+  <Detail name="triangleCount">30908</Detail>
+  <Detail name="vertexCount">23689</Detail>
+  <Detail name="16BitPrecision">false</Detail>
+  <Detail name="bonesCount">48</Detail>
+ </Details>
+ <Dependencies>
+  <Path>objects/characters/panda/panda.mtl</Path>
+ </Dependencies>
+</AssetMetadata>

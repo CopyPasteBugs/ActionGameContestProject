@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="473c55e2-cf44-732d-d146-12b9d953b521">
+ <Files>
+  <File path="FaceTags.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">TagDefinition</Detail>
+ </Details>
+</AssetMetadata>

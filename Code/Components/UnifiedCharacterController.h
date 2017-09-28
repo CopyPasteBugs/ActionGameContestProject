@@ -138,6 +138,7 @@ public: // extended functionality of component
 	}
 
 	const Vec3& GetVelocity() const { return m_velocity; }
+	const Vec3& GetLastMinVelocity() const { return m_lastMinVelocity; }
 	Vec3 GetMoveDirection() const { return m_velocity.GetNormalized(); }
 	Vec3 GetMoveDirection2D() const { Vec3 unifiedVelocity2D(m_velocity.x, m_velocity.y, 0.0f); return unifiedVelocity2D.GetNormalized(); }
 
@@ -145,11 +146,16 @@ public: // extended functionality of component
 	virtual void Physicalize();
 	virtual void PhysicalizeWithNone();
 	virtual void Ragdollize();
+	bool IsRagdoll() { return m_bRagdoll; };
 
 protected:
 	SUnifiedPhysics m_unifiedPhysics;
 	SUnifiedMovement m_unifiedMovement;
 	bool m_bOnGround = false;
+	bool m_bRagdoll = false;
 	Schematyc::UnitLength<Vec3> m_groundNormal = Vec3(0, 0, 1);
 	Vec3 m_velocity = ZERO;
+
+	Vec3 m_lastMinVelocity = Vec3(0.0f);
+	const float m_minMagnitude = 0.2f;
 };

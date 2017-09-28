@@ -32,14 +32,22 @@ public:
 	void SetYawPitchRoll(Vec3 orient_) { YawPitchRoll = orient_; };
 	void SetDistance(float distance_) { Distance = distance_; };
 	void SetTarget(IEntity* target_) { Target = target_; };
+	void SetTargetOffset(Vec3 offset) { m_TargetOffset = offset; };
 	Vec3 GetPlaneForward();
+	void UpdateDistanceToTarget(float& wheelMove, float frameTime);
+	void UpdateYaw(float mouseDeltaRotationX, float frameTime);
 
-	Vec3 YawPitchRoll = Vec3(DEG2RAD(0.0f), DEG2RAD(-35.0f), 0.0); // target observe angle 
-	float Distance = 10.0f;
+	Vec3 YawPitchRoll = Vec3(DEG2RAD(0.0f), DEG2RAD(-15.0f), 0.0); // target observe angle 
+	float Distance = 5.0f;
+	
+	float m_maxDistance = 5;
+	float m_minDistance = 1.0f;
+
 	Matrix33 RotationMatrix;
 	Quat Rotation;
 	IEntity* Target = nullptr;
 	IEntity* blendCamera = nullptr;
+	Vec3 m_TargetOffset = Vec3(0.0f);
 
 	IEntity* forwardCamera = nullptr;
 	Matrix33 planeRotationMatrix;

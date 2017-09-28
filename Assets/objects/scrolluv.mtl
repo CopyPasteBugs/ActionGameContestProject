@@ -1,0 +1,11 @@
+<Material MtlFlags="526336" Shader="Glass" GenMask="0" StringGenMask="" SurfaceType="mat_concrete" MatTemplate="" Diffuse="0,0,0" Specular="0,0,0" Opacity="1" CloakAmount="0" vertModifType="0" LayerAct="1">
+ <Textures>
+  <Texture Map="Diffuse" File="%engine%/engineassets/textures/caustics_sampler.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TexMod_UOscillatorType="2" TexMod_UOscillatorRate="0.30000001" TexMod_UOscillatorAmplitude="1.7" TexMod_VOscillatorRate="0.30000001" TexMod_VOscillatorAmplitude="0.69999999"/>
+  </Texture>
+  <Texture Map="Bumpmap" File="%engine%/engineassets/textures/hex_ddn.dds">
+   <TexMod TexMod_RotateType="0" TexMod_TexGenType="0" TexMod_bTexGenProjected="0" TexMod_UOscillatorRate="0.30000001"/>
+  </Texture>
+ </Textures>
+ <PublicParams BumpMapTile="1" TintColor="1,1,1" TintCloudiness="0" BackLightScale="0.5" BumpScale="0.1"/>
+</Material>

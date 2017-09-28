@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="bb2c737b-d839-dd5e-ea54-f5a3f8460400">
+ <Files>
+  <File path="Substitutions.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">Substitutions</Detail>
+ </Details>
+</AssetMetadata>

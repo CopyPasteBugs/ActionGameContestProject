@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="450f7cc8-b817-6b07-b094-afb12ad97ce7">
+ <Files>
+  <File path="bigworld.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">EnvironmentPreset</Detail>
+ </Details>
+</AssetMetadata>

@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="8c83524f-ed6a-2749-bfe8-ed46d6dbab18">
+ <Files>
+  <File path="panda_hitmaterial.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">3</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>

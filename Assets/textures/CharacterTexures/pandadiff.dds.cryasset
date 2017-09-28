@@ -1,0 +1,10 @@
+<AssetMetadata version="0" type="Texture" guid="05fe0215-2e4e-fc3b-044b-f4c2ef6c808b" source="pandadiff.tif">
+ <Files>
+  <File path="pandadiff.dds"/>
+ </Files>
+ <Details>
+  <Detail name="width">1024</Detail>
+  <Detail name="height">1024</Detail>
+  <Detail name="mipCount">9</Detail>
+ </Details>
+</AssetMetadata>

@@ -1,0 +1,8 @@
+<AssetMetadata version="0" type="Xml" guid="7028a63b-b34c-e023-e566-a8a1fb447a23">
+ <Files>
+  <File path="sc1.xml"/>
+ </Files>
+ <Details>
+  <Detail name="rootTag">EnvironmentPreset</Detail>
+ </Details>
+</AssetMetadata>

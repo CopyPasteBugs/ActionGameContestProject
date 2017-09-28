@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="b964a913-3f9c-824d-458d-d7409443ab46">
+ <Files>
+  <File path="face_hitmaterial.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">2</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>

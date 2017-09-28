@@ -1,0 +1,4 @@
+<SkeletonList>
+ <Skeleton name="Panda_Skel" file="objects/Characters/Panda/panda.chr"/>
+ <Skeleton name="Face_Skel" file="objects/Characters/Face/Face.chr"/>
+</SkeletonList>

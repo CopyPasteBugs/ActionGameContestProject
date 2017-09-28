@@ -1,0 +1,33 @@
+<Material MtlFlags="524544" vertModifType="0">
+ <SubMaterials>
+  <Material Name="SFMat01" MtlFlags="524416" Shader="Illum" GenMask="80400000" StringGenMask="%NORMAL_MAP%SUBSURFACE_SCATTERING" SurfaceType="" MatTemplate="" Diffuse="1,1,1" Specular="0.26225069,0.26225069,0.26225069" Opacity="1" Shininess="114" CloakAmount="0" vertModifType="0" LayerAct="1">
+   <Textures>
+    <Texture Map="Diffuse" File="textures/white.dds"/>
+    <Texture Map="Bumpmap" File="%engine%/engineassets/textures/white_ddn.dds"/>
+   </Textures>
+   <PublicParams EmittanceMapGamma="1" SSSIndex="0"/>
+  </Material>
+  <Material Name="SubMtl2" MtlFlags="524416" Shader="Illum" GenMask="80400000" StringGenMask="%NORMAL_MAP%SUBSURFACE_SCATTERING" SurfaceType="" MatTemplate="" Diffuse="0.026241222,0.0036765076,0.99110222" Specular="0.21223079,0.21223079,0.21223079" Opacity="1" Shininess="113" CloakAmount="0" vertModifType="0" LayerAct="1">
+   <Textures>
+    <Texture Map="Diffuse" File="textures/white.dds"/>
+    <Texture Map="Bumpmap" File="%engine%/engineassets/textures/white_ddn.dds"/>
+   </Textures>
+   <PublicParams EmittanceMapGamma="1" SSSIndex="0"/>
+  </Material>
+  <Material Name="SubMtl3" MtlFlags="524416" Shader="Illum" GenMask="80400000" StringGenMask="%NORMAL_MAP%SUBSURFACE_SCATTERING" SurfaceType="" MatTemplate="" Diffuse="1,0.001214108,0.001214108" Specular="0.24620135,0.24620135,0.24620135" Opacity="1" Shininess="104" CloakAmount="0" vertModifType="0" LayerAct="1">
+   <Textures>
+    <Texture Map="Diffuse" File="textures/white.dds"/>
+    <Texture Map="Bumpmap" File="%engine%/engineassets/textures/white_ddn.dds"/>
+   </Textures>
+   <PublicParams EmittanceMapGamma="1" SSSIndex="0"/>
+  </Material>
+  <Material Name="SubMtl4" MtlFlags="524416" Shader="Illum" GenMask="80400000" StringGenMask="%NORMAL_MAP%SUBSURFACE_SCATTERING" SurfaceType="" MatTemplate="" Diffuse="0.0085681258,0.31398875,0.0024282159" Specular="0.23455061,0.23455061,0.23455061" Opacity="1" Shininess="146" CloakAmount="0" vertModifType="0" LayerAct="1">
+   <Textures>
+    <Texture Map="Diffuse" File="textures/white.dds"/>
+    <Texture Map="Bumpmap" File="%engine%/engineassets/textures/white_ddn.dds"/>
+   </Textures>
+   <PublicParams EmittanceMapGamma="1" SSSIndex="0"/>
+  </Material>
+ </SubMaterials>
+ <PublicParams EmittanceMapGamma="1" SSSIndex="0"/>
+</Material>

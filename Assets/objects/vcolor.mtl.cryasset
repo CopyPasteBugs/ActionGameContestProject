@@ -1,0 +1,15 @@
+<AssetMetadata version="0" type="Material" guid="a6c1a5f8-fd63-156f-c643-85bfa0d74d2c">
+ <Files>
+  <File path="vcolor.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">4</Detail>
+  <Detail name="textureCount">4</Detail>
+ </Details>
+ <Dependencies>
+  <Path>textures/white.dds</Path>
+  <Path>textures/white.dds</Path>
+  <Path>textures/white.dds</Path>
+  <Path>textures/white.dds</Path>
+ </Dependencies>
+</AssetMetadata>

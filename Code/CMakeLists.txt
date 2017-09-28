@@ -38,6 +38,17 @@ add_sources("Components_uber.cpp"
     "Components/ThirdPersonCamera.cpp"
     "Components/GameCommon.h"
     "Components/GameCommon.cpp"
+    "Components/UnifiedCharacterAnimation.h"
+    "Components/UnifiedCharacterAnimation.cpp"
+    "Components/FootstepQueue.h"
+    "Components/FootstepQueue.cpp"
+    "Components/SimpleGeom.h"
+    "Components/SimpleGeom.cpp"
+    "Components/ProximityTrigger.h"
+    "Components/ProximityTrigger.cpp"
+    "Components/SplineComponent.h"
+    "Components/SplineComponent.cpp"
+    
 )
 
 end_sources()

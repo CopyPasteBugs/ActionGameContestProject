@@ -1,0 +1,5 @@
+<TimeOfDay Time="23.200001" TimeStart="12" TimeEnd="12" TimeAnimSpeed="0">
+ <Presets>
+  <Preset Name="libs/environmentpresets/SC1.xml" Default="1"/>
+ </Presets>
+</TimeOfDay>

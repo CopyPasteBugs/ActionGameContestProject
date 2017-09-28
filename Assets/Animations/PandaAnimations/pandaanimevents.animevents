@@ -1,0 +1,7 @@
+<anim_event_list>
+ <animation name="animations/pandaanimations/bspace/1done-bspace_forward.bspace"/>
+ <animation name="animations/pandaanimations/run.caf">
+  <event name="footstep" time="0.34187499" endTime="0.34187499" parameter="Left" bone="Foot.L" offset="0,0,0" dir="0,0,0" model=""/>
+  <event name="footstep" time="0.81687492" endTime="0.81687492" parameter="Right" bone="Foot.R" offset="0,0,0" dir="0,0,0" model=""/>
+ </animation>
+</anim_event_list>

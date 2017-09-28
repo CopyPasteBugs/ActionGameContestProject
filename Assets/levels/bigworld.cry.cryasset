@@ -1,0 +1,28 @@
+<AssetMetadata version="0" type="Level" guid="9591e295-7cb1-3451-ad2d-fd90be34934c" source="">
+ <Files>
+  <File path="BigWorld/BigWorld.cry"/>
+ </Files>
+ <Dependencies>
+  <Path>%editor%/crydesigner_timeofday.xml</Path>
+  <Path>%editor%/default_time_of_day.xml</Path>
+  <Path>%editor%/leveltemplates.xml</Path>
+  <Path>%editor%/mapscreenshotsettings.xml</Path>
+  <Path>%editor%/materials/crydesigner_selection.mtl</Path>
+  <Path>%editor%/mbttemplates.xml</Path>
+  <Path>%editor%/modellingpanel.xml</Path>
+  <Path>%editor%/objecttemplates.xml</Path>
+  <Path>%editor%/propertyenumerations.xml</Path>
+  <Path>%editor%/soundtemplates.xml</Path>
+  <Path>%editor%/toolbox.xml</Path>
+  <Path>%editor%/usertools.xml</Path>
+  <Path>%engine%/config/defaultscripts/compressionpolicy.xml</Path>
+  <Path>%engine%/engineassets/icons/averagememoryusage.dds</Path>
+  <Path>%engine%/engineassets/icons/highmemoryusage.dds</Path>
+  <Path>%engine%/engineassets/icons/livepreview.dds</Path>
+  <Path>%engine%/engineassets/icons/lowmemoryusage.dds</Path>
+  <Path>%engine%/engineassets/texturemsg/defaultsolids.mtl</Path>
+  <Path>%engine%/engineassets/texturemsg/orange_for_designer.dds</Path>
+  <Path>%engine%/engineassets/textures/grey.dds</Path>
+  <Path>libs/environmentpresets/level1.xml</Path>
+ </Dependencies>
+</AssetMetadata>

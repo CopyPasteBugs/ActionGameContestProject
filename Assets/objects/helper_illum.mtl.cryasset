@@ -1,0 +1,9 @@
+<AssetMetadata version="0" type="Material" guid="5ba3ec2f-0346-417b-16fe-454c6f55bf39">
+ <Files>
+  <File path="helper_illum.mtl"/>
+ </Files>
+ <Details>
+  <Detail name="subMaterialCount">0</Detail>
+  <Detail name="textureCount">0</Detail>
+ </Details>
+</AssetMetadata>
